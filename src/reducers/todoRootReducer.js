@@ -2,7 +2,6 @@ import {ADD_TODO, DELETE_TODO, SAVE_TODO, INCRIMENT_TODO, DECRIMENT_TODO, EDIT_T
 from '../types';
 import Todo from "../Todo";
 
-
 const myState = {
     todoList: [],
     todoCount:0
@@ -16,12 +15,7 @@ const myState = {
 
 
 
-
-
 function todoRootReducer(mState = myState, actions){
-    
-  
-
     switch(actions.type)
     {   
         case ADD_TODO:
@@ -37,12 +31,6 @@ function todoRootReducer(mState = myState, actions){
            return {...mState};
 
         case EDIT_TODO:
-
-            ///// Problem Here ///////////
-            
-            ////// action.payload contain   Object of TodoTask Dispatched here 
-            ///// finding object with id in existing array 
-            // var task = newState.todoList.filter(c => c.id === actions.payload.id);
             ///// cheching on which index that is 
             var index = mState.todoList.findIndex(task => task.id === actions.payload.id);
            console.log("action.payload", actions.payload);
@@ -52,28 +40,10 @@ function todoRootReducer(mState = myState, actions){
             }
 
             return {...mState};
-        case SAVE_TODO:
-            // const todo = actions.payload;
-
-            // const todoList = {...todoList};
-            // const value = {...todoList.find(c => c.id == todo.id)};
-            // value.data = {...todo.data};
-            // todoList[index] = {...todo};
-
-            return;
-        case INCRIMENT_TODO:
-            // const id = actions.payload;
-            return;
-        case DECRIMENT_TODO:
-            // const id = actions.payload;
-            return;
-        
-
         default:
             return mState;
     }
  
 }   
-
 
 export default todoRootReducer;

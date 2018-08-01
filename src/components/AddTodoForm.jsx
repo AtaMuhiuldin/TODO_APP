@@ -32,9 +32,6 @@ class AddTodoForm extends Component
 	}
 
 	addTodoItem = () =>{
-	// debugger;
-	
-		// this.props.addTodo( new Todo(3, this.state.inputValue ));
 		this.props.addTodo(new Todo(1, this.state.inputValue ));
 		
 	}

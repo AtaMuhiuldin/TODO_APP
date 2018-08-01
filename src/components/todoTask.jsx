@@ -17,12 +17,9 @@ class TodoTask extends Component
 
 		jobStyle:{width: '500px'},
 		empCountStyle:{width : '100px'},
-
 		btnName: 'edit',
 		data: '',
 		flag: true,
-	
-
 		mTodo: ''
 	}
 
@@ -30,10 +27,7 @@ class TodoTask extends Component
 	render(){
 		
 		return(	
-
 				<div key={this.props.key}>	
-					
-
 					{/*will initialize input data to task discription to prevent readOnly inputbox*/}
 					{/* {this.initializeData()} */}
 					
@@ -57,13 +51,11 @@ class TodoTask extends Component
 						 key={2}
 						 className={this.getBadge()}>
 							 {"Persons " +this.formatCount()}
-							 
 				    </span>
 
 
 
 					{/*input box to edit a task */}
-					
 					{this.props.mTodoTask.editingMode ? 
 					<input 
 						type="text" 
@@ -77,13 +69,7 @@ class TodoTask extends Component
 					</span>
 					}
 					
-					
-
-					
-						 {/*this span is showing save value of task*/}
-						
-
-
+					     	 {/*this span is showing save value of task*/}
 							{/*manageData is a function that is saveing data to collection*/}
 					<button key={5} onClick={this.manageData }  className={"btn  m-2 btn-sm btn-"}>{ this.props.mTodoTask.editingMode ? "Save" : "Edit"}</button>
 					

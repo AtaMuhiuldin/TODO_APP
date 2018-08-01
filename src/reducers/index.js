@@ -1,5 +1,3 @@
-// import {showAll} from '../reducers/listReducer';
-// import {showSingle} from '../reducers/singleReducer';
 import {combineReducers} from 'redux';
 import authReducer from './authReducer';
 import todoRootReducer from './todoRootReducer';

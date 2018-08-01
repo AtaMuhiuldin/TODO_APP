@@ -24,17 +24,11 @@ class App extends Component {
         <Provider store = {store}>
           <div className="App">
               <NavBar/>
-              {/* {store.getState().auth.isAuthenticated? <AdminPage/> : <Home>} */}
               <Route exact path="/" component={HomePage} />
               <Route exact path="/register" component = {Register} />
               <Route exact path="/login" component = {Login}/>
               <Route exact path="/admin" component = {AdminPage}/>
               <Route exact path="/collection" component = {TodoCollection}/>
-              {/* {console.log("Main Store " ,store)}
-
-              {store.subscribe(() =>{console.log("MyStore", store.getState())})} */}
-               {/* {store.subscribe(() => { store.getState().auth.isAuthenticated ? this.getAdminPage: <HomePage/> })} */}
-              {/* {store.auth.isAuthenticated === true ? this.getAdminPage: <HomePage/> } */}
           </div>
         </Provider>
       </Router>
